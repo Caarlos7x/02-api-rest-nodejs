@@ -16,3 +16,6 @@ if (_env.success === false) {
 }
 
 export const env = _env.data;
+
+// Verifique a variável PORT
+console.log(`Porta configurada: ${env.PORT}`);
