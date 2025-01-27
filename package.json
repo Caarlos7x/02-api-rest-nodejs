@@ -6,7 +6,7 @@
     "dev": "tsx watch src/server.ts",
     "knex": "ts-node -r tsconfig-paths/register ./node_modules/knex/bin/cli.js",
     "test": "vitest",
-    "build": "tsup src"
+    "build": "tsup src --external mysql2"
   },
   "keywords": [],
   "author": "",
@@ -27,9 +27,16 @@
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
+    "better-sqlite3": "^11.8.1",
     "dotenv": "^16.4.7",
     "fastify": "^5.2.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.12.0",
+    "oracledb": "^6.7.1",
+    "pg": "^8.13.1",
+    "pg-query-stream": "^4.7.1",
     "sqlite3": "^5.1.7",
+    "tedious": "^18.6.1",
     "zod": "^3.24.1"
   }
 }
