@@ -1,30 +1,11 @@
 import { app } from './app';
 import { env } from './env';
 
-const port = process.env.PORT || 3333;
-
 app
   .listen({
-    port: Number(port),
+    port: env.PORT,
+    host: '0.0.0.0',
   })
   .then(() => {
-    console.log(`Server started on port ${port}`);
+    console.log(`Server started on port ${env.PORT}`);
   });
-
-
-
-
-
-
-
-
-// import { app } from './app';
-// import { env } from './env';
-
-// app
-//   .listen({
-//     port: env.PORT,
-//   })
-//   .then(() => {
-//     console.log("Server started on port 3333");
-//   });
